@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { db } from '../firebase';
 import { collection, onSnapshot } from 'firebase/firestore';
+import Nav from '../components/Nav';
+
 
 export default function DataTable() {
     const [users, setUsers] = useState([]);
@@ -19,6 +21,8 @@ export default function DataTable() {
 
     return (
         <div className="p-8">
+            <Nav />
+
             <h1 className="text-2xl mb-4">User Data</h1>
             <table className="border-collapse border border-gray-300 w-full">
                 <thead>
